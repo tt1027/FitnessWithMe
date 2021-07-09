@@ -44,8 +44,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfe-M8-TxH">
-                                <rect key="frame" x="139" y="271" width="136" height="30"/>
+                                <rect key="frame" x="20" y="271" width="136" height="30"/>
                                 <state key="normal" title="Click to log workout"/>
+                                <connections>
+                                    <action selector="enterWorkout1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvz-Gi-SbS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-Ou-0DW">
                                 <rect key="frame" x="142" y="528" width="130" height="30"/>
@@ -55,26 +58,55 @@
                                 <rect key="frame" x="146" y="794" width="122" height="30"/>
                                 <state key="normal" title="Click to add plans"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="enter workout here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-Gi-wjD">
+                                <rect key="frame" x="132" y="93" width="150" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="workout record" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BR6-Yq-HPK">
+                                <rect key="frame" x="20" y="135" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-pX-KzP">
+                                <rect key="frame" x="283" y="271" width="111" height="30"/>
+                                <state key="normal" title="append workout"/>
+                                <connections>
+                                    <action selector="appendWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7D-Nw-rs0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kfe-M8-TxH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1bq-uc-TDX"/>
                             <constraint firstItem="s6W-Ou-0DW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3B6-1w-RaN"/>
                             <constraint firstItem="9x4-Qa-k3c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47j-NF-cIv"/>
-                            <constraint firstItem="beQ-HU-Gur" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9jI-uZ-1Gf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BR6-Yq-HPK" secondAttribute="trailing" constant="20" id="6vR-Qx-IpD"/>
+                            <constraint firstItem="l2t-Gi-wjD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUw-Le-JPc"/>
+                            <constraint firstItem="BR6-Yq-HPK" firstAttribute="top" secondItem="l2t-Gi-wjD" secondAttribute="bottom" constant="8" id="BeC-60-5cs"/>
                             <constraint firstAttribute="trailing" secondItem="4CQ-5m-Ker" secondAttribute="trailing" id="FCt-Zr-TO3"/>
+                            <constraint firstItem="BR6-Yq-HPK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FSb-Vd-UJT"/>
+                            <constraint firstItem="Kfe-M8-TxH" firstAttribute="top" secondItem="BR6-Yq-HPK" secondAttribute="bottom" constant="8" symbolic="YES" id="IYP-FI-OiY"/>
                             <constraint firstItem="qCe-KN-xmy" firstAttribute="top" secondItem="s6W-Ou-0DW" secondAttribute="bottom" constant="20" id="J5u-6I-vNG"/>
                             <constraint firstItem="qCe-KN-xmy" firstAttribute="top" secondItem="gMN-x3-q9Z" secondAttribute="bottom" constant="236" id="JHR-7a-O4U"/>
+                            <constraint firstItem="BR6-Yq-HPK" firstAttribute="top" secondItem="l2t-Gi-wjD" secondAttribute="bottom" constant="8" symbolic="YES" id="KyN-V7-4fo"/>
                             <constraint firstItem="4CQ-5m-Ker" firstAttribute="top" secondItem="gMN-x3-q9Z" secondAttribute="bottom" id="Nui-VG-uEq"/>
                             <constraint firstItem="gMN-x3-q9Z" firstAttribute="top" secondItem="beQ-HU-Gur" secondAttribute="bottom" constant="236" id="Oiz-ta-E7L"/>
                             <constraint firstItem="beQ-HU-Gur" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PBP-rg-4H6"/>
+                            <constraint firstItem="l2t-Gi-wjD" firstAttribute="top" secondItem="beQ-HU-Gur" secondAttribute="bottom" constant="8" id="Q4r-bK-4Bq"/>
                             <constraint firstItem="lQk-wZ-lh8" firstAttribute="top" secondItem="qCe-KN-xmy" secondAttribute="bottom" id="XwV-18-Cjz"/>
                             <constraint firstItem="qCe-KN-xmy" firstAttribute="top" secondItem="4CQ-5m-Ker" secondAttribute="bottom" id="ZGq-9M-K6j"/>
+                            <constraint firstItem="beQ-HU-Gur" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="b1a-o5-ROC"/>
+                            <constraint firstItem="BR6-Yq-HPK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bs6-N2-xQq"/>
+                            <constraint firstItem="4CQ-5m-Ker" firstAttribute="top" secondItem="Cde-pX-KzP" secondAttribute="bottom" constant="41" id="fqw-fg-CDm"/>
+                            <constraint firstItem="Kfe-M8-TxH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gkn-vR-904"/>
                             <constraint firstItem="qCe-KN-xmy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jgs-r6-ptI"/>
                             <constraint firstItem="lQk-wZ-lh8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kSt-oF-hhv"/>
                             <constraint firstItem="sfp-Gx-6R5" firstAttribute="top" secondItem="beQ-HU-Gur" secondAttribute="bottom" id="la1-iQ-1b9"/>
                             <constraint firstItem="9x4-Qa-k3c" firstAttribute="top" secondItem="s6W-Ou-0DW" secondAttribute="bottom" constant="236" id="lea-fj-7wD"/>
+                            <constraint firstAttribute="trailing" secondItem="Cde-pX-KzP" secondAttribute="trailing" constant="20" id="ogH-Bw-IuQ"/>
                             <constraint firstItem="4CQ-5m-Ker" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pau-Rn-YS7"/>
                             <constraint firstItem="gMN-x3-q9Z" firstAttribute="top" secondItem="sfp-Gx-6R5" secondAttribute="bottom" id="rh4-pj-y2E"/>
                             <constraint firstAttribute="trailing" secondItem="lQk-wZ-lh8" secondAttribute="trailing" id="sri-km-Gqe"/>
@@ -84,6 +116,10 @@
                             <constraint firstItem="gMN-x3-q9Z" firstAttribute="top" secondItem="Kfe-M8-TxH" secondAttribute="bottom" constant="20" id="xmQ-Gw-RZt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayWorkout" destination="BR6-Yq-HPK" id="2D9-B6-F4k"/>
+                        <outlet property="workout1" destination="l2t-Gi-wjD" id="QTj-XF-YyQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +130,9 @@
         <image name="Barbell" width="413" height="230"/>
         <image name="Beach" width="414" height="230"/>
         <image name="Running" width="414" height="230"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
